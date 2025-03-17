@@ -1,0 +1,22 @@
+[project]
+name = "langgraph-linkedin-post-generator"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "datetime>=5.5",
+    "feedparser>=6.0.11",
+    "langchain>=0.3.20",
+    "langchain-community>=0.3.19",
+    "langchain-core>=0.3.41",
+    "langchain-google-vertexai>=2.0.14",
+    "langchain-ollama>=0.2.3",
+    "langchain-openai>=0.3.7",
+    "langgraph>=0.3.5",
+    "pydantic>=2.10.6",
+    "pydantic-settings>=2.8.1",
+    "pytest>=8.3.5",
+    "python-dotenv>=1.0.1",
+    "typing>=3.10.0.0",
+]
