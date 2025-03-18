@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List, Optional
+from typing import List, Optional, Literal
 from langgraph.graph import START
 
 class NewsArticle(BaseModel):
@@ -13,8 +13,11 @@ class NewsArticle(BaseModel):
 class State(BaseModel):
     search_results: Optional[List[dict]] = Field(default=None, description="List of search results")
     news_articles: Optional[List[NewsArticle]] = Field(default=None, description="List of news articles")
+    selected_articles: Optional[List[NewsArticle]] = Field(default=None, description="List of selected articles for user choice")
     linkedin_article: Optional[NewsArticle] = Field(default=None, description="Article for LinkedIn post generation")
     linkedin_post: Optional[str] = Field(default=None, description="LinkedIn post generated from the article")
     current_node: Optional[str] = Field(default=START, description="Current node in the workflow")
     error: Optional[str] = Field(default=None, description="Error message if any")
+    quality_evaluation: Optional[dict] = Field(default=None, description="User feedback for post improvement")
+    needs_rewrite: Optional[bool] = Field(default=False, description="Whether the post needs to be rewritten")
     
