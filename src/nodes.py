@@ -58,7 +58,7 @@ def fetch_ai_news_rss_node(state: State) -> State:
             return State(error="No entries found in the RSS feed.")
 
         # Get today's news from the first feed entry (each entry represents one day)
-        result = feed.entries[0].summary
+        result = feed.entries[1].summary
         headlines = re.findall(r"(?s)<h3.*?>(?P<headline>.*?)</h3>(.*?)<hr />", result)
 
         articles = []

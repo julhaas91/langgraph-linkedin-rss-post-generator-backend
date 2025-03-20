@@ -1,6 +1,6 @@
-# AI News Workflow
+# LangGraph AI News RSS Fetcher and LinkedIn Post Generator Agent
 
-A LangGraph-based workflow that automatically finds the latest AI news, selects the most relevant article, and generates a LinkedIn post about them.
+A LangGraph-based workflow that automatically finds the latest AI news, selects the most relevant article, and generates a LinkedIn post. 
 
 ## Overview
 
@@ -27,7 +27,7 @@ graph TD
     C --> D[Select Article]
     D --> E[Generate LinkedIn Post]
     E --> F[Get User Feedback]
-    F -->|Needs Improvement| E
+    F -->|Implement Improvement| E
     F -->|Approved| G[Save LinkedIn Post]
     G --> H[End]
 ```
@@ -48,7 +48,7 @@ uv sync
 
 2. Set up environment variables in a `.env` file:
 
-```
+``` bash
 # Choose model type: "local" or "openai"
 MODEL=local
 

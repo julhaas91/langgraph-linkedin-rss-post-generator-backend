@@ -25,7 +25,6 @@ from nodes import (
     select_article_node,
     generate_linkedin_post_node, 
     get_user_feedback_node,
-    gather_additional_info_node,
     save_linkedin_post_node
 )
 
