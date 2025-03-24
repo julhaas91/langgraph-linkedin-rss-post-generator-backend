@@ -12,5 +12,6 @@ wheels/
 # Environment Variables
 .env
 
-# 
+# Generated content
 linkedin_post.txt
+
